@@ -1,0 +1,24 @@
+nav {
+    text-align: left;
+    font-size: 15px;
+}
+
+.header {
+    text-align: left;
+}
+
+
+.body {
+    text-align: left;
+    font-size: 20px;
+    top: 2px;
+    left: 250px;
+}
+
+.text {
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    top: 2px;
+    left: 250px;
+}
