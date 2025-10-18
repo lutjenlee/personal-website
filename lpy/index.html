@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+            background-color: #f8f8f8;
+        }
+
+        .card {
+            border: 3px solid #F4C2C2; /* revert to previous thickness */
+            border-radius: 20px;
+            background: #ffffff;
+            padding: 32px; /* keep generous margin from border */
+            width: min(90vw, 1000px);
+            box-sizing: border-box;
+        }
+
+        .card-content {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* image left, text right */
+            align-items: center; /* vertically center columns relative to each other */
+            gap: 32px; /* increased space between columns */
+        }
+
+        /* vertical divider */
+        .card-content::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            background: #F4C2C2;
+            transform: translateX(-1px);
+            border-radius: 1px;
+        }
+
+        .left {
+            display: flex;
+            justify-content: center;
+            align-items: center; /* center image within left column */
+        }
+
+        .left img {
+            width: 100%;
+            height: auto;
+            max-height: 100%;
+            object-fit: contain; /* keep image centered and fully visible */
+            object-position: center center;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .message {
+            font-size: 1.05em;
+            line-height: 1.6;
+            text-align: center; /* center text inside the card */
+        }
+
+        /* Responsive: remove card features and stack */
+        @media (max-width: 700px) {
+            body {
+                align-items: flex-start;
+                padding: 16px;
+            }
+            .card {
+                border: none;
+                border-radius: 0;
+                background: transparent;
+                padding: 0;
+                width: 100%;
+            }
+            .card-content {
+                display: block;
+            }
+            .card-content::before {
+                display: none;
+            }
+            .right {
+                margin-top: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-content">
+            <div class="left">
+                <img src="../hbd%20lpy%20strava.jpg" alt="HBD LPY Strava route" />
+            </div>
+            <div class="right">
+                <div class="message">
+                    HAPPY BIRTHDAY PHEI YI!!! 🎉🥳🎉 <br><br>
+                    thank you for sitting on the floor to talk with me a few too many times 🥰 part 1 should be much cleaner and more comfortable 🙏😂 <br><br>
+                    from the time we started talking you’ve been my favourite person to spend time with! and i can’t wait for more in the land of CASTLES, BAGPIPES, and HAGGIS. <br><br>
+                    long distance time from you feels it couldn’t move slower.. but to me our calls goes by WAYY too fast :(( <br><br>
+                    i love your heart, energy, thoughtfulness, and excitement to share time together. i genuinely don’t think the world deserves you! but I’ll try my best :)) <br><br>
+                    🙋‍♂️❤️🫵 <br><br>
+                    from lutjen :)) 18/10/2025
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
