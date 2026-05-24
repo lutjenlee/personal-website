@@ -1,58 +1,257 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lutjen Lee</title>
+    <link rel="icon" href="camera pp copy.jpg">
+    <style>
+        :root {
+            --canvas: #ffffff;
+            --ink: #000000;
+        }
 
-<title> Lutjen Lee </title>
-<link rel="icon" href="camera pp copy.jpg">
-<link rel="stylesheet" href="style.css">
+        * {
+            box-sizing: border-box;
+        }
 
-<header>
-    <nav>
-    <pre> 
-    <b>Lutjen Lee</b>
-    <a href="about.html">About</a>
-    <a href="people.html">People</a>
-    <a href="books.html">Books</a>
-    <a href="podcasts.html">Podcasts</a>
-    <a href="quotes.html">Quotes</a>
-    <a href="https://www.instagram.com/lutjenlee" target="_blank">Instagram</a>
-    <a href="https://twitter.com/lutjenlee" target="_blank">Twitter</a>
-    <a href="https://www.linkedin.com/in/lutjen-lee/" target="_blank">LinkedIn</a>
-    <a href="https://www.youtube.com/@lutjenlee" target="_blank">Youtube</a>
-    <a href="https://github.com/lutjenlee" target="_blank">Github</a>
-    <a href="https://www.crunchbase.com/person/lutjen-lee" target="_blank">Crunchbase</a>
-    <a href="https://lu.ma/user/lutjenlee" target="_blank">Luma</a>
-    <a href="https://linktr.ee/lutjenlee" target="_blank">Linktree</a>
-    <a href="https://buymeacoffee.com/lutjenlee" target="_blank">Buy Me Coffee</a>
-    <a href="techego.html">Founder Mode Quiz</a>
-    </pre>
-    </nav>
-</header>
+        html,
+        body {
+            min-height: 100%;
+            margin: 0;
+            background: #ffffff;
+        }
 
+        body {
+            background: #ffffff;
+            color: var(--ink);
+            font-family: "SFUIDisplay", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        a:hover,
+        a:focus-visible {
+            border-bottom: 1px dashed currentColor;
+            outline: 0;
+        }
+
+        .landing {
+            position: relative;
+            min-height: 100vh;
+            min-height: 100svh;
+            padding: clamp(32px, 6.8vh, 58px) clamp(28px, 5.2vw, 72px);
+            overflow: hidden;
+            background: #ffffff;
+        }
+
+        .hero-title,
+        .hero-role {
+            margin: 0;
+            color: #000000;
+            font-family: "NeueHaasDisplay", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+            font-size: clamp(74px, 10.25vw, 156px);
+            font-weight: 400;
+            letter-spacing: -0.055em;
+            line-height: 0.86;
+            text-transform: uppercase;
+        }
+
+        .hero-title {
+            display: inline-block;
+            max-width: 980px;
+        }
+
+        .hero-role {
+            position: absolute;
+            right: clamp(28px, 5.2vw, 72px);
+            bottom: clamp(36px, 7vh, 72px);
+            max-width: calc(100vw - clamp(56px, 10.4vw, 144px));
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        .nav {
+            position: absolute;
+            top: clamp(32px, 6.8vh, 58px);
+            right: clamp(28px, 5.2vw, 72px);
+            display: grid;
+            gap: 5px;
+            justify-items: end;
+            font-size: 12px;
+            line-height: 1;
+        }
+
+        .nav a:hover,
+        .nav a:focus-visible {
+            border-bottom: 0;
+        }
+
+        .bio {
+            position: absolute;
+            left: clamp(28px, 5.2vw, 72px);
+            bottom: clamp(210px, 34vh, 285px);
+            width: min(520px, calc(100vw - 56px));
+            margin: 0;
+            font-size: 11px;
+            font-weight: 700;
+            line-height: 1.2;
+            text-align: left;
+        }
+
+        .bio span {
+            display: block;
+            white-space: nowrap;
+        }
+
+        .bio-link {
+            color: #0000ee;
+            text-decoration: none;
+            border-bottom: 0;
+        }
+
+        .bio-link:hover,
+        .bio-link:focus-visible {
+            border-bottom: 0;
+        }
+
+        .site-image {
+            position: absolute;
+            left: clamp(28px, 5.2vw, 72px);
+            bottom: clamp(36px, 7vh, 72px);
+            width: clamp(62px, 7vw, 96px);
+            aspect-ratio: 1;
+            object-fit: cover;
+            border: 1px solid var(--ink);
+            border-radius: 50%;
+        }
+
+        @media (max-width: 900px) {
+            body {
+                overflow: hidden;
+            }
+
+            .landing {
+                padding: 32px 24px;
+            }
+
+            .hero-title,
+            .hero-role {
+                font-size: clamp(58px, 10vw, 92px);
+                letter-spacing: -0.055em;
+            }
+
+            .nav {
+                top: 34px;
+                right: 24px;
+                font-size: 11px;
+                gap: 5px;
+            }
+
+            .bio {
+                left: 24px;
+                bottom: 250px;
+            }
+
+            .hero-role {
+                right: 24px;
+                bottom: 42px;
+                text-align: right;
+                white-space: nowrap;
+            }
+
+            .site-image {
+                left: 24px;
+                bottom: 46px;
+            }
+        }
+
+        @media (max-width: 560px) {
+            body {
+                overflow: auto;
+            }
+
+            .landing {
+                min-height: 100vh;
+            }
+
+            .hero-title,
+            .hero-role {
+                font-size: clamp(54px, 19vw, 82px);
+                letter-spacing: -0.04em;
+            }
+
+            .nav {
+                position: static;
+                margin-top: 28px;
+                justify-items: start;
+                grid-template-columns: repeat(2, max-content);
+                gap: 12px 18px;
+            }
+
+            .hero-role,
+            .bio,
+            .site-image {
+                position: static;
+            }
+
+            .bio {
+                width: min(230px, 100%);
+                margin-top: 76px;
+            }
+
+            .bio span {
+                white-space: normal;
+            }
+
+            .hero-role {
+                margin-top: 92px;
+                text-align: left;
+                white-space: normal;
+            }
+
+            .site-image {
+                margin-top: 64px;
+            }
+        }
+    </style>
+</head>
 <body>
+    <main class="landing">
+        <h1 class="hero-title">Lutjen<br>Lee</h1>
 
-    <pre class="text">
-    <h6>Born: 28 January 2003, Kuala Lumpur, Malaysia</h6> 
-    <h6>Education: Royal Melbourne Institute of University</h6> 
-    <h6>Organization Founded: <a href="https://www.farmbite.com.au">Farmbite</a></h6> 
-    <h6>Bio: Lutjen Lee is an Australian entrepreneur, currently building Farmbite, an agriculture-tourism platform that makes it easy for people to find and visit farms.</h6> 
+        <nav class="nav" aria-label="Primary navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="people.html">People</a>
+            <a href="books.html">Books</a>
+            <a href="podcasts.html">Podcasts</a>
+            <a href="quotes.html">Quotes</a>
+            <a href="https://www.instagram.com/lutjenlee" target="_blank">Instagram</a>
+            <a href="https://twitter.com/lutjenlee" target="_blank">Twitter</a>
+            <a href="https://www.linkedin.com/in/lutjen-lee/" target="_blank">LinkedIn</a>
+            <a href="https://www.youtube.com/@lutjenlee" target="_blank">Youtube</a>
+            <a href="https://github.com/lutjenlee" target="_blank">Github</a>
+            <a href="https://www.crunchbase.com/person/lutjen-lee" target="_blank">Crunchbase</a>
+            <a href="https://lu.ma/user/lutjenlee" target="_blank">Luma</a>
+            <a href="https://linktr.ee/lutjenlee" target="_blank">Linktree</a>
+            <a href="https://buymeacoffee.com/lutjenlee" target="_blank">Buy Me Coffee</a>
+            <a href="techego.html">Founder Mode Quiz</a>
+        </nav>
 
+        <p class="bio">
+            <span>Born: 28 January 2003, Kuala Lumpur, Malaysia</span>
+            <span>Education: Royal Melbourne Institute of University</span>
+            <span>Currently building: <a class="bio-link" href="https://farmbite.com.au" target="_blank" rel="noopener">farmbite</a> &amp; <a class="bio-link" href="https://supaviral.com" target="_blank" rel="noopener">supaviral.com</a></span>
+        </p>
 
+        <img class="site-image" src="camera pp copy.jpg" alt="Lutjen Lee">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </pre>
+        <p class="hero-role">Australian<br>Entrepreneur</p>
+    </main>
+</body>
 </html>
-

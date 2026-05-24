@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Founder Mode Quiz</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         /* Super Tech and Modern Design Styles */
 
@@ -11,9 +12,9 @@
 
         body {
             margin: 0;
-            padding: 0;
-            background-color: #0F0F0F;
-            color: #FFFFFF;
+            padding: clamp(32px, 6.8vh, 58px) clamp(220px, 18vw, 280px) 64px clamp(28px, 5.2vw, 72px);
+            background-color: #FFFFFF;
+            color: #000000;
             font-family: 'Montserrat', sans-serif;
             overflow-x: hidden;
         }
@@ -36,8 +37,8 @@
 
         .progress-bar {
             width: 100%;
-            background-color: #1A1A1A;
-            border-radius: 10px;
+            background-color: #FFFFFF;
+            border: 1px solid #000000;
             overflow: hidden;
             margin: 20px 0;
         }
@@ -45,18 +46,17 @@
         .progress {
             height: 10px;
             width: 0%;
-            background: linear-gradient(90deg, #00D1FF, #0072FF);
+            background: #000000;
             transition: width 0.4s ease;
         }
 
         .question-card {
-            background-color: #161616;
+            background-color: #FFFFFF;
             padding: 30px;
-            border-radius: 10px;
+            border: 1px solid #000000;
             margin-bottom: 20px;
             display: none;
             animation: fadeIn 0.5s;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
         .question-card.active {
@@ -66,7 +66,7 @@
         .question-number {
             font-size: 1.2em;
             margin-bottom: 10px;
-            color: #00D1FF;
+            color: #000000;
         }
 
         .question-text {
@@ -81,9 +81,9 @@
         }
 
         .option {
-            background-color: #1A1A1A;
+            background-color: #FFFFFF;
             padding: 20px 30px;
-            border-radius: 10px;
+            border: 1px solid #000000;
             cursor: pointer;
             user-select: none;
             transition: background-color 0.3s ease, transform 0.2s ease;
@@ -92,7 +92,7 @@
             text-align: center;
             font-weight: 600;
             font-size: 1.2em;
-            color: #FFFFFF;
+            color: #000000;
             position: relative;
             overflow: hidden;
         }
@@ -104,7 +104,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(0, 209, 255, 0.2), transparent);
+            background: transparent;
             transition: left 0.5s;
         }
 
@@ -113,7 +113,8 @@
         }
 
         .option:hover {
-            background-color: #0072FF;
+            background-color: #000000;
+            color: #FFFFFF;
             transform: scale(1.05);
         }
 
@@ -126,21 +127,20 @@
         .result h2 {
             font-size: 2.5em;
             margin-bottom: 20px;
-            color: #00D1FF;
+            color: #000000;
         }
 
         .result p {
             font-size: 1.2em;
             line-height: 1.5;
-            color: #CCCCCC;
+            color: #000000;
         }
 
         .restart-btn {
-            background: linear-gradient(90deg, #0072FF, #00D1FF);
+            background: #000000;
             color: #FFFFFF;
             padding: 15px 30px;
-            border: none;
-            border-radius: 10px;
+            border: 1px solid #000000;
             cursor: pointer;
             font-size: 1em;
             margin-top: 30px;
@@ -156,6 +156,12 @@
             display: none;
         }
 
+        @media (max-width: 700px) {
+            body {
+                padding: 32px 24px 64px;
+            }
+        }
+
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
@@ -163,6 +169,26 @@
     </style>
 </head>
 <body>
+    <header>
+        <nav class="site-nav" aria-label="Primary navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="people.html">People</a>
+            <a href="books.html">Books</a>
+            <a href="podcasts.html">Podcasts</a>
+            <a href="quotes.html">Quotes</a>
+            <a href="https://www.instagram.com/lutjenlee" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://twitter.com/lutjenlee" target="_blank" rel="noopener">Twitter</a>
+            <a href="https://www.linkedin.com/in/lutjen-lee/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.youtube.com/@lutjenlee" target="_blank" rel="noopener">Youtube</a>
+            <a href="https://github.com/lutjenlee" target="_blank" rel="noopener">Github</a>
+            <a href="https://www.crunchbase.com/person/lutjen-lee" target="_blank" rel="noopener">Crunchbase</a>
+            <a href="https://lu.ma/user/lutjenlee" target="_blank" rel="noopener">Luma</a>
+            <a href="https://linktr.ee/lutjenlee" target="_blank" rel="noopener">Linktree</a>
+            <a href="https://buymeacoffee.com/lutjenlee" target="_blank" rel="noopener">Buy Me Coffee</a>
+            <a href="techego.html">Founder Mode Quiz</a>
+        </nav>
+    </header>
 
     <div class="container">
         <h1>Founder Mode Quiz</h1>
