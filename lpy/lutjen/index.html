@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fullscreen looping video from Lutjen Lee for LPY.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Lutjen | LPY">
+    <meta property="og:description" content="Fullscreen looping video from Lutjen Lee for LPY.">
+    <meta property="og:type" content="video.other">
+    <meta property="og:url" content="https://lutjenlee.com/lpy/lutjen/">
+    <meta property="og:video" content="https://lutjenlee.com/lpy/lutjen/face-recording.mp4">
+    <meta property="og:video:type" content="video/mp4">
+    <meta property="og:video:width" content="1280">
+    <meta property="og:video:height" content="720">
+    <meta name="twitter:card" content="player">
+    <meta name="twitter:title" content="Lutjen | LPY">
+    <meta name="twitter:player" content="https://lutjenlee.com/lpy/lutjen/">
+    <meta name="twitter:player:width" content="1280">
+    <meta name="twitter:player:height" content="720">
+    <link rel="canonical" href="https://lutjenlee.com/lpy/lutjen/">
+    <link rel="preload" href="face-recording.mp4" as="video" type="video/mp4">
+    <title>Lutjen | LPY</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            min-height: 100%;
+            margin: 0;
+            background: #000000;
+        }
+
+        body {
+            overflow: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+        }
+
+        main {
+            min-height: 100vh;
+            min-height: 100svh;
+            background: #000000;
+        }
+
+        .fullscreen-video {
+            position: fixed;
+            inset: 0;
+            display: block;
+            width: 100vw;
+            height: 100vh;
+            height: 100svh;
+            background: #000000;
+            object-fit: cover;
+        }
+
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <main aria-labelledby="page-title">
+        <h1 id="page-title" class="visually-hidden">Lutjen Lee fullscreen looping video for LPY</h1>
+        <video
+            class="fullscreen-video"
+            src="face-recording.mp4"
+            autoplay
+            muted
+            loop
+            playsinline
+            controls
+            preload="auto"
+            aria-label="Lutjen Lee video recording">
+            <a href="face-recording.mp4">Download the Lutjen Lee video recording</a>
+        </video>
+    </main>
+</body>
+</html>
