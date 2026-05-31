@@ -79,11 +79,26 @@
             muted
             loop
             playsinline
-            controls
             preload="auto"
             aria-label="Lutjen Lee video recording">
             <a href="face-recording.mp4">Download the Lutjen Lee video recording</a>
         </video>
     </main>
+    <script>
+        const video = document.querySelector(".fullscreen-video");
+
+        const playVideo = () => {
+            if (!video) return;
+            video.muted = true;
+            video.loop = true;
+            video.play().catch(() => {});
+        };
+
+        playVideo();
+        video?.addEventListener("canplay", playVideo, { once: true });
+        document.addEventListener("visibilitychange", () => {
+            if (!document.hidden) playVideo();
+        });
+    </script>
 </body>
 </html>
