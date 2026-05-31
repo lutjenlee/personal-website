@@ -13,12 +13,14 @@
     <meta property="og:video:type" content="video/mp4">
     <meta property="og:video:width" content="1280">
     <meta property="og:video:height" content="720">
+    <meta property="og:image" content="https://lutjenlee.com/lpy/lutjen/poster.jpg">
     <meta name="twitter:card" content="player">
     <meta name="twitter:title" content="Lutjen | LPY">
     <meta name="twitter:player" content="https://lutjenlee.com/lpy/lutjen/">
     <meta name="twitter:player:width" content="1280">
     <meta name="twitter:player:height" content="720">
     <link rel="canonical" href="https://lutjenlee.com/lpy/lutjen/">
+    <link rel="preload" href="poster.jpg" as="image">
     <link rel="preload" href="face-recording.mp4" as="video" type="video/mp4">
     <title>Lutjen | LPY</title>
     <style>
@@ -43,6 +45,9 @@
             min-height: 100vh;
             min-height: 100svh;
             background: #000000;
+            background-image: url("poster.jpg");
+            background-position: center;
+            background-size: cover;
         }
 
         .fullscreen-video {
@@ -75,6 +80,7 @@
         <video
             class="fullscreen-video"
             src="face-recording.mp4"
+            poster="poster.jpg"
             autoplay
             muted
             loop
